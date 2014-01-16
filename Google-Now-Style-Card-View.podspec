@@ -52,7 +52,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/lanbozhang/Google-Now-Style-Card-View.git", :commit => "af563332f7bf2d9b81ecfb6d9793fa0cc66fc729" }
+  s.source       = { :git => "https://github.com/lanbozhang/Google-Now-Style-Card-View.git" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

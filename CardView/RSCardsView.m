@@ -690,6 +690,11 @@ Animation:
                      }];
 }
 
+- (BOOL)canRemoveFromSuperview:(RSCardView *)cardView{
+    NSIndexPath *indexPath = [self indexPathForCard:cardView];
+    return [self.delegate cardViewCanRemoveAtIndexPath:indexPath];
+}
+
 - (void)didChangeFrame:(RSCardView *)cardView {
     [self setUserInteractionEnabled:NO];
     

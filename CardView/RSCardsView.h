@@ -25,6 +25,8 @@
 
 - (void)cardViewDidRemoveAtIndexPath:(NSIndexPath *)indexPath;
 
+- (BOOL)cardViewCanRemoveAtIndexPath:(NSIndexPath *)indexPath;
+
 // For exchange animation
 - (void)cardViewWillExchangeAtIndexPath:(NSIndexPath *)indexPath withIndexPath:(NSIndexPath *)otherIndexPath;
 

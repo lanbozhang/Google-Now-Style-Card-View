@@ -27,6 +27,8 @@ typedef NS_ENUM (NSUInteger, RSCardViewSwipeDirection) {
 
 - (void)didRemoveFromSuperview:(RSCardView *)cardView;
 
+- (BOOL)canRemoveFromSuperview:(RSCardView *)cardView;
+
 - (void)didTapOnCard:(RSCardView *)cardView;
 
 - (void)didChangeFrame:(RSCardView *)cardView;
