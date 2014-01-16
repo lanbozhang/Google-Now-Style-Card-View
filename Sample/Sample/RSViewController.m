@@ -197,4 +197,12 @@
     [object release];
 }
 
+- (void)cardViewDidSelectAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
+- (BOOL)cardViewShouldDisplaySettingIconAndViewAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+
 @end

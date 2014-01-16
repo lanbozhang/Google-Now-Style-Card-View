@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D0EB955F17D86CA9008AEBB7 /* Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EB955E17D86CA9008AEBB7 /* Settings@2x.png */; };
+		40B9F6EB1887B4ED00FBE727 /* RSCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B9F6E11887B4ED00FBE727 /* RSCard.m */; };
+		40B9F6EC1887B4ED00FBE727 /* RSCardsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B9F6E31887B4ED00FBE727 /* RSCardsView.m */; };
+		40B9F6ED1887B4ED00FBE727 /* RSCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B9F6E51887B4ED00FBE727 /* RSCardView.m */; };
+		40B9F6EE1887B4ED00FBE727 /* Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 40B9F6E61887B4ED00FBE727 /* Settings@2x.png */; };
+		40B9F6EF1887B4ED00FBE727 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B9F6E81887B4ED00FBE727 /* UIColor+Expanded.m */; };
+		40B9F6F01887B4ED00FBE727 /* UIView+Folding.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B9F6EA1887B4ED00FBE727 /* UIView+Folding.m */; };
 		D0F2B1AA1780511E002053BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F2B1A91780511E002053BA /* UIKit.framework */; };
 		D0F2B1AC1780511E002053BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F2B1AB1780511E002053BA /* Foundation.framework */; };
 		D0F2B1AE1780511E002053BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F2B1AD1780511E002053BA /* CoreGraphics.framework */; };
@@ -18,18 +23,23 @@
 		D0F2B1BE1780511E002053BA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F2B1BD1780511E002053BA /* Default@2x.png */; };
 		D0F2B1C01780511E002053BA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F2B1BF1780511E002053BA /* Default-568h@2x.png */; };
 		D0F2B1C31780511E002053BA /* RSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1C21780511E002053BA /* RSViewController.m */; };
-		D0F2B1D7178051A3002053BA /* RSCard.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1CE178051A3002053BA /* RSCard.m */; };
-		D0F2B1D8178051A3002053BA /* RSCardsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1D0178051A3002053BA /* RSCardsView.m */; };
-		D0F2B1D9178051A3002053BA /* RSCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1D2178051A3002053BA /* RSCardView.m */; };
-		D0F2B1DA178051A3002053BA /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1D4178051A3002053BA /* UIColor+Expanded.m */; };
-		D0F2B1DB178051A3002053BA /* UIView+Folding.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1D6178051A3002053BA /* UIView+Folding.m */; };
 		D0F2B1DD1780570A002053BA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F2B1DC1780570A002053BA /* QuartzCore.framework */; };
 		D0F2B1E017805C19002053BA /* RSSimpleCard.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1DF17805C19002053BA /* RSSimpleCard.m */; };
 		D0F2B1E317805C2A002053BA /* RSSimpleCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F2B1E217805C2A002053BA /* RSSimpleCardView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D0EB955E17D86CA9008AEBB7 /* Settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings@2x.png"; sourceTree = "<group>"; };
+		40B9F6E01887B4ED00FBE727 /* RSCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCard.h; sourceTree = "<group>"; };
+		40B9F6E11887B4ED00FBE727 /* RSCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCard.m; sourceTree = "<group>"; };
+		40B9F6E21887B4ED00FBE727 /* RSCardsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCardsView.h; sourceTree = "<group>"; };
+		40B9F6E31887B4ED00FBE727 /* RSCardsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCardsView.m; sourceTree = "<group>"; };
+		40B9F6E41887B4ED00FBE727 /* RSCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCardView.h; sourceTree = "<group>"; };
+		40B9F6E51887B4ED00FBE727 /* RSCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCardView.m; sourceTree = "<group>"; };
+		40B9F6E61887B4ED00FBE727 /* Settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings@2x.png"; sourceTree = "<group>"; };
+		40B9F6E71887B4ED00FBE727 /* UIColor+Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expanded.h"; sourceTree = "<group>"; };
+		40B9F6E81887B4ED00FBE727 /* UIColor+Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Expanded.m"; sourceTree = "<group>"; };
+		40B9F6E91887B4ED00FBE727 /* UIView+Folding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Folding.h"; sourceTree = "<group>"; };
+		40B9F6EA1887B4ED00FBE727 /* UIView+Folding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Folding.m"; sourceTree = "<group>"; };
 		D0F2B1A61780511E002053BA /* Google Now Style Card View Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Google Now Style Card View Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F2B1A91780511E002053BA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D0F2B1AB1780511E002053BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -45,16 +55,6 @@
 		D0F2B1BF1780511E002053BA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D0F2B1C11780511E002053BA /* RSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSViewController.h; sourceTree = "<group>"; };
 		D0F2B1C21780511E002053BA /* RSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSViewController.m; sourceTree = "<group>"; };
-		D0F2B1CD178051A3002053BA /* RSCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCard.h; sourceTree = "<group>"; };
-		D0F2B1CE178051A3002053BA /* RSCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCard.m; sourceTree = "<group>"; };
-		D0F2B1CF178051A3002053BA /* RSCardsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCardsView.h; sourceTree = "<group>"; };
-		D0F2B1D0178051A3002053BA /* RSCardsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCardsView.m; sourceTree = "<group>"; };
-		D0F2B1D1178051A3002053BA /* RSCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCardView.h; sourceTree = "<group>"; };
-		D0F2B1D2178051A3002053BA /* RSCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCardView.m; sourceTree = "<group>"; };
-		D0F2B1D3178051A3002053BA /* UIColor+Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expanded.h"; sourceTree = "<group>"; };
-		D0F2B1D4178051A3002053BA /* UIColor+Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Expanded.m"; sourceTree = "<group>"; };
-		D0F2B1D5178051A3002053BA /* UIView+Folding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Folding.h"; sourceTree = "<group>"; };
-		D0F2B1D6178051A3002053BA /* UIView+Folding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Folding.m"; sourceTree = "<group>"; };
 		D0F2B1DC1780570A002053BA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D0F2B1DE17805C19002053BA /* RSSimpleCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSimpleCard.h; sourceTree = "<group>"; };
 		D0F2B1DF17805C19002053BA /* RSSimpleCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSimpleCard.m; sourceTree = "<group>"; };
@@ -77,6 +77,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40B9F6DF1887B4ED00FBE727 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				40B9F6E01887B4ED00FBE727 /* RSCard.h */,
+				40B9F6E11887B4ED00FBE727 /* RSCard.m */,
+				40B9F6E21887B4ED00FBE727 /* RSCardsView.h */,
+				40B9F6E31887B4ED00FBE727 /* RSCardsView.m */,
+				40B9F6E41887B4ED00FBE727 /* RSCardView.h */,
+				40B9F6E51887B4ED00FBE727 /* RSCardView.m */,
+				40B9F6E61887B4ED00FBE727 /* Settings@2x.png */,
+				40B9F6E71887B4ED00FBE727 /* UIColor+Expanded.h */,
+				40B9F6E81887B4ED00FBE727 /* UIColor+Expanded.m */,
+				40B9F6E91887B4ED00FBE727 /* UIView+Folding.h */,
+				40B9F6EA1887B4ED00FBE727 /* UIView+Folding.m */,
+			);
+			name = CardView;
+			path = ../../CardView;
+			sourceTree = "<group>";
+		};
 		D0F2B19D1780511E002053BA = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +127,7 @@
 		D0F2B1AF1780511E002053BA /* Sample */ = {
 			isa = PBXGroup;
 			children = (
-				D0F2B1CC178051A3002053BA /* Card View */,
+				40B9F6DF1887B4ED00FBE727 /* CardView */,
 				D0F2B1B81780511E002053BA /* RSAppDelegate.h */,
 				D0F2B1B91780511E002053BA /* RSAppDelegate.m */,
 				D0F2B1C11780511E002053BA /* RSViewController.h */,
@@ -134,25 +153,6 @@
 				D0F2B1BF1780511E002053BA /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D0F2B1CC178051A3002053BA /* Card View */ = {
-			isa = PBXGroup;
-			children = (
-				D0EB955E17D86CA9008AEBB7 /* Settings@2x.png */,
-				D0F2B1CD178051A3002053BA /* RSCard.h */,
-				D0F2B1CE178051A3002053BA /* RSCard.m */,
-				D0F2B1CF178051A3002053BA /* RSCardsView.h */,
-				D0F2B1D0178051A3002053BA /* RSCardsView.m */,
-				D0F2B1D1178051A3002053BA /* RSCardView.h */,
-				D0F2B1D2178051A3002053BA /* RSCardView.m */,
-				D0F2B1D3178051A3002053BA /* UIColor+Expanded.h */,
-				D0F2B1D4178051A3002053BA /* UIColor+Expanded.m */,
-				D0F2B1D5178051A3002053BA /* UIView+Folding.h */,
-				D0F2B1D6178051A3002053BA /* UIView+Folding.m */,
-			);
-			name = "Card View";
-			path = "../../Card View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,7 +209,7 @@
 			files = (
 				D0F2B1B41780511E002053BA /* InfoPlist.strings in Resources */,
 				D0F2B1BC1780511E002053BA /* Default.png in Resources */,
-				D0EB955F17D86CA9008AEBB7 /* Settings@2x.png in Resources */,
+				40B9F6EE1887B4ED00FBE727 /* Settings@2x.png in Resources */,
 				D0F2B1BE1780511E002053BA /* Default@2x.png in Resources */,
 				D0F2B1C01780511E002053BA /* Default-568h@2x.png in Resources */,
 			);
@@ -222,15 +222,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B9F6F01887B4ED00FBE727 /* UIView+Folding.m in Sources */,
+				40B9F6EF1887B4ED00FBE727 /* UIColor+Expanded.m in Sources */,
 				D0F2B1B61780511E002053BA /* main.m in Sources */,
+				40B9F6ED1887B4ED00FBE727 /* RSCardView.m in Sources */,
 				D0F2B1BA1780511E002053BA /* RSAppDelegate.m in Sources */,
 				D0F2B1C31780511E002053BA /* RSViewController.m in Sources */,
-				D0F2B1D7178051A3002053BA /* RSCard.m in Sources */,
-				D0F2B1D8178051A3002053BA /* RSCardsView.m in Sources */,
-				D0F2B1D9178051A3002053BA /* RSCardView.m in Sources */,
-				D0F2B1DA178051A3002053BA /* UIColor+Expanded.m in Sources */,
-				D0F2B1DB178051A3002053BA /* UIView+Folding.m in Sources */,
 				D0F2B1E017805C19002053BA /* RSSimpleCard.m in Sources */,
+				40B9F6EC1887B4ED00FBE727 /* RSCardsView.m in Sources */,
+				40B9F6EB1887B4ED00FBE727 /* RSCard.m in Sources */,
 				D0F2B1E317805C2A002053BA /* RSSimpleCardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

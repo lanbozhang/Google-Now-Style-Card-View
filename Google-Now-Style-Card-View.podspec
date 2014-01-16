@@ -4,6 +4,6 @@ Pod::Spec.new do |s|
   s.source = {
     :git => 'https://github.com/lanbozhang/Google-Now-Style-Card-View.git'
   }
-  s.source_files = 'Card\ View/*.{h,m,png}’
+  s.source_files = 'CardView/*.{h,m,png}’
   s.requires_arc = false
 end
