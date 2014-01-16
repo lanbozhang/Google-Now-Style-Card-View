@@ -204,7 +204,7 @@ static const int kContentViewShadowRadius = 2;
 }
 
 - (void)handlePanGestureRecognizer:(UIPanGestureRecognizer *)gestureRecognizer {
-    if (_panGestureRecognizer == gestureRecognizer && [self.delegate canRemoveFromSuperview:self]) {
+    if (_panGestureRecognizer == gestureRecognizer) {
         UIGestureRecognizerState state = [gestureRecognizer state];
         CGPoint translation = [gestureRecognizer translationInView:self];
         CGPoint velocity = [gestureRecognizer velocityInView:self];
@@ -230,6 +230,10 @@ static const int kContentViewShadowRadius = 2;
 #pragma mark - UIGestureRecognizerDelegate
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    if (_panGestureRecognizer == gestureRecognizer && ![self.delegate canRemoveFromSuperview:self]) {
+        return NO;
+    }
+    
     if (_panGestureRecognizer == gestureRecognizer) {
         UIPanGestureRecognizer *panGestureRecognizer = (UIPanGestureRecognizer *)gestureRecognizer;
         CGPoint velocity = [panGestureRecognizer velocityInView:self];
