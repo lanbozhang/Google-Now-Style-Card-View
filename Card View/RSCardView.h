@@ -21,6 +21,8 @@ typedef NS_ENUM (NSUInteger, RSCardViewSwipeDirection) {
 
 @required
 
+- (BOOL)shouldDisplaySettingIconAndViewForCard:(RSCardView *)card;
+
 - (BOOL)canToggleSettings:(RSCardView *)cardView;
 
 - (void)didRemoveFromSuperview:(RSCardView *)cardView;
@@ -56,5 +58,7 @@ typedef NS_ENUM (NSUInteger, RSCardViewSwipeDirection) {
 - (void)toggleSettings;
 
 - (void)insertAnimation;
+
+- (void)moveWithDuration:(NSTimeInterval)duration andDirection:(RSCardViewSwipeDirection)direction;
 
 @end

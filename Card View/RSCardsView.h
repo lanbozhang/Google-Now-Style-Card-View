@@ -35,6 +35,10 @@
 
 - (void)cardViewDidDropAtIndexPath:(NSIndexPath *)indexPath;
 
+- (void)cardViewDidSelectAtIndexPath:(NSIndexPath *)indexPath;
+
+- (BOOL)cardViewShouldDisplaySettingIconAndViewAtIndexPath:(NSIndexPath *)indexPath;
+
 @end
 
 @protocol RSCardsViewDataSource <NSObject>
@@ -66,5 +70,7 @@ typedef NS_ENUM (NSUInteger, RSCardsViewAnimationStyle) {
 - (void)setNeedsReload;
 
 - (void)insertCard:(RSCardView *)card;
+
+- (NSIndexPath *)indexPathForCard:(RSCardView *)card;
 
 @end

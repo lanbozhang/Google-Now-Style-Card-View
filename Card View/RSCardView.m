@@ -116,53 +116,67 @@ static const int kContentViewShadowRadius = 2;
 }
 
 #pragma mark - UIView
-
-- (id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    
-    if (self) {
-        // Initialization code
-        self.clipsToBounds = YES;
-        self.backgroundColor = [UIColor clearColor];
-        
+- (void)delayCreateSetting{
+    if ([self.delegate shouldDisplaySettingIconAndViewForCard:self]) {
         _settingsView = [[[UIView alloc] initWithFrame:CGRectMake(kContentViewMargin.left, 0, self.bounds.size.width - kContentViewMargin.left - kContentViewMargin.right, 0)] autorelease];
         _settingsView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         _settingsView.backgroundColor = [UIColor lightGrayColor];
         _settingsView.hidden = YES;
-        [self addSubview:_settingsView];
-        
-        _contentView = [[[UIView alloc] initWithFrame:CGRectMake(kContentViewMargin.left, kContentViewMargin.top, self.bounds.size.width - kContentViewMargin.left - kContentViewMargin.right, 0)] autorelease];
-        _contentView.layer.anchorPoint = CGPointMake(0, 1);
-        CGRect frame = _contentView.frame;
-        frame.origin.x = frame.origin.x - roundf(frame.size.width / 2.f);
-        _contentView.frame = frame;
-        _contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        _contentView.backgroundColor = [UIColor whiteColor];
-        _contentView.layer.borderColor = [UIColor darkGrayColor].CGColor;
-        _contentView.layer.borderWidth = 1;
-        _contentView.layer.masksToBounds = NO;
-        _contentView.layer.shadowColor = [UIColor colorWithRGBHex:0x5e5c5c].CGColor;
-        _contentView.layer.shadowOpacity = 0.75;
-        _contentView.layer.shadowRadius = kContentViewShadowRadius;
-        _contentView.layer.shadowOffset = kContentViewShadowOffset;
-        _contentView.layer.shadowPath = [[UIBezierPath bezierPathWithRect:_contentView.bounds] CGPath];
-        _contentView.layer.rasterizationScale = [[UIScreen mainScreen] scale];
-        _contentView.layer.shouldRasterize = YES;
-        [self addSubview:_contentView];
+        [self insertSubview:_settingsView aboveSubview:_contentView];
         
         _settingsButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_settingsButton setImage:[UIImage imageNamed:@"Settings"] forState:UIControlStateNormal];
         [_settingsButton addTarget:self action:@selector(settingsButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [_settingsButton sizeToFit];
-        [_contentView addSubview:_settingsButton];
-        
-        _panGestureRecognizer = [[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGestureRecognizer:)] autorelease];
-        _panGestureRecognizer.delegate = self;
-        [self addGestureRecognizer:_panGestureRecognizer];
-        
-        _tapGestureRecognizer = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGestureRecognizer:)] autorelease];
-        _tapGestureRecognizer.delegate = self;
-        [self addGestureRecognizer:_tapGestureRecognizer];
+        [self insertSubview:_settingsButton aboveSubview:_settingsView];
+    }
+}
+- (void)setupView{
+    // Initialization code
+    self.clipsToBounds = YES;
+    self.backgroundColor = [UIColor clearColor];
+    
+    _contentView = [[[UIView alloc] initWithFrame:CGRectMake(kContentViewMargin.left, kContentViewMargin.top, self.bounds.size.width - kContentViewMargin.left - kContentViewMargin.right, 0)] autorelease];
+    _contentView.layer.anchorPoint = CGPointMake(0, 1);
+    CGRect frame = _contentView.frame;
+    frame.origin.x = frame.origin.x - roundf(frame.size.width / 2.f);
+    _contentView.frame = frame;
+    _contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    _contentView.backgroundColor = [UIColor whiteColor];
+    _contentView.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    _contentView.layer.borderWidth = 1;
+    _contentView.layer.masksToBounds = NO;
+    _contentView.layer.shadowColor = [UIColor colorWithRGBHex:0x5e5c5c].CGColor;
+    _contentView.layer.shadowOpacity = 0.75;
+    _contentView.layer.shadowRadius = kContentViewShadowRadius;
+    _contentView.layer.shadowOffset = kContentViewShadowOffset;
+    _contentView.layer.shadowPath = [[UIBezierPath bezierPathWithRect:_contentView.bounds] CGPath];
+    _contentView.layer.rasterizationScale = [[UIScreen mainScreen] scale];
+    _contentView.layer.shouldRasterize = YES;
+    [self insertSubview:_contentView atIndex:0];
+    
+    [self performSelector:@selector(delayCreateSetting)
+               withObject:nil
+               afterDelay:0];
+    
+    _panGestureRecognizer = [[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGestureRecognizer:)] autorelease];
+    _panGestureRecognizer.delegate = self;
+    [self addGestureRecognizer:_panGestureRecognizer];
+    
+    _tapGestureRecognizer = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGestureRecognizer:)] autorelease];
+    _tapGestureRecognizer.delegate = self;
+    [self addGestureRecognizer:_tapGestureRecognizer];
+}
+
+- (void)awakeFromNib{
+    [self setupView];
+}
+
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    
+    if (self) {
+        [self setupView];
     }
     
     return self;

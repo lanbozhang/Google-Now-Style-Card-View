@@ -625,6 +625,11 @@ Animation:
     return self.backgroundColor;
 }
 
+- (BOOL)shouldDisplaySettingIconAndViewForCard:(RSCardView *)card{
+    NSIndexPath* indexPath = [self indexPathForCard:card];
+    return [self.delegate cardViewShouldDisplaySettingIconAndViewAtIndexPath:indexPath];
+}
+
 - (BOOL)canToggleSettings:(RSCardView *)card {
     int section = [self sectionForCard:card];
     RSCardView *lastCard = [self cardForIndexPath:[NSIndexPath indexPathForRow:[self lastRowInSection:section] inSection:section]];
@@ -634,10 +639,13 @@ Animation:
 
 - (void)didTapOnCard:(RSCardView *)card {
     int section = [self sectionForCard:card];
-    RSCardView *lastCard = [self cardForIndexPath:[NSIndexPath indexPathForRow:[self lastRowInSection:section] inSection:section]];
+    NSIndexPath* lastIndexPath = [NSIndexPath indexPathForRow:[self lastRowInSection:section] inSection:section];
+    RSCardView *lastCard = [self cardForIndexPath:lastIndexPath];
     
     if (card != lastCard) {
         [self animationWillStart:card];
+    }else{
+        [self.delegate cardViewDidSelectAtIndexPath:lastIndexPath];
     }
 }
 
@@ -645,10 +653,6 @@ Animation:
     [self setUserInteractionEnabled:NO];
     
     NSIndexPath *indexPath = [self indexPathForCard:card];
-    
-    if (__delegate && [__delegate respondsToSelector:@selector(cardViewDidRemoveAtIndexPath:)]) {
-        [__delegate cardViewDidRemoveAtIndexPath:indexPath];
-    }
     
     [[self indexPaths][indexPath.section] removeObjectAtIndex:indexPath.row];
     
@@ -664,7 +668,7 @@ Animation:
         [[self indexPaths] removeObjectAtIndex:section];
         
         for (int i = section; i <= [self lastSection]; i++) {
-            for (int j = 0; j <= [self lastRowInSection:section]; j++) {
+            for (int j = 0; j <= [self lastRowInSection:i]; j++) {
                 NSIndexPath *indexPath = [self indexPaths][i][j];
                 [self cardForIndexPath:indexPath].tag -= kSectionSpan;
                 [self indexPaths][i][j] = [NSIndexPath indexPathForRow:[indexPath row] inSection:[indexPath section] - 1];
@@ -679,6 +683,10 @@ Animation:
      
                      completion: ^(BOOL finished) {
                          [self setUserInteractionEnabled:YES];
+                         
+                         if (__delegate && [__delegate respondsToSelector:@selector(cardViewDidRemoveAtIndexPath:)]) {
+                             [__delegate cardViewDidRemoveAtIndexPath:indexPath];
+                         }
                      }];
 }
 
